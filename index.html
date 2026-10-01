@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#0b0b0f">
+
+    <title>Calculator Pro</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- TOP BAR -->
+        <header class="top-bar">
+            <div>
+                <h1>Calculator</h1>
+                <p>Pro</p>
+            </div>
+
+            <div class="top-actions">
+                <button class="icon-btn" id="historyBtn" title="History">
+                    ↺
+                </button>
+
+                <button class="icon-btn" id="themeBtn" title="Toggle theme">
+                    ☼
+                </button>
+            </div>
+        </header>
+
+
+        <!-- CALCULATOR -->
+        <main class="calculator">
+
+            <!-- DISPLAY -->
+            <section class="display">
+
+                <div class="expression" id="expression">
+                    0
+                </div>
+
+                <div class="result" id="result">
+                    0
+                </div>
+
+                <button class="copy-btn" id="copyBtn" title="Copy result">
+                    ⧉
+                </button>
+
+            </section>
+
+
+            <!-- MODE SWITCH -->
+            <div class="mode-switch">
+
+                <button
+                    class="mode-btn active"
+                    id="basicModeBtn"
+                >
+                    Basic
+                </button>
+
+                <button
+                    class="mode-btn"
+                    id="scientificModeBtn"
+                >
+                    Scientific
+                </button>
+
+            </div>
+
+
+            <!-- SCIENTIFIC BUTTONS -->
+            <section
+                class="scientific-buttons hidden"
+                id="scientificButtons"
+            >
+
+                <button data-scientific="sin">sin</button>
+                <button data-scientific="cos">cos</button>
+                <button data-scientific="tan">tan</button>
+                <button data-scientific="sqrt">√</button>
+
+                <button data-scientific="log">log</button>
+                <button data-scientific="ln">ln</button>
+                <button data-scientific="square">x²</button>
+                <button data-scientific="cube">x³</button>
+
+                <button data-scientific="inverse">1/x</button>
+                <button data-scientific="pi">π</button>
+                <button data-scientific="e">e</button>
+                <button data-scientific="factorial">x!</button>
+
+            </section>
+
+
+            <!-- CALCULATOR BUTTONS -->
+            <section class="buttons">
+
+                <button
+                    class="function"
+                    data-action="clear"
+                >
+                    AC
+                </button>
+
+                <button
+                    class="function"
+                    data-action="delete"
+                >
+                    DEL
+                </button>
+
+                <button
+                    class="function"
+                    data-action="percent"
+                >
+                    %
+                </button>
+
+                <button
+                    class="operator"
+                    data-operator="/"
+                >
+                    ÷
+                </button>
+
+
+                <button data-number="7">7</button>
+                <button data-number="8">8</button>
+                <button data-number="9">9</button>
+
+                <button
+                    class="operator"
+                    data-operator="*"
+                >
+                    ×
+                </button>
+
+
+                <button data-number="4">4</button>
+                <button data-number="5">5</button>
+                <button data-number="6">6</button>
+
+                <button
+                    class="operator"
+                    data-operator="-"
+                >
+                    −
+                </button>
+
+
+                <button data-number="1">1</button>
+                <button data-number="2">2</button>
+                <button data-number="3">3</button>
+
+                <button
+                    class="operator"
+                    data-operator="+"
+                >
+                    +
+                </button>
+
+
+                <button
+                    class="function"
+                    data-action="sign"
+                >
+                    +/−
+                </button>
+
+                <button data-number="0">0</button>
+
+                <button data-action="decimal">
+                    .
+                </button>
+
+                <button
+                    class="equals"
+                    data-action="equals"
+                >
+                    =
+                </button>
+
+            </section>
+
+        </main>
+
+
+        <!-- HISTORY PANEL -->
+        <aside class="history-panel" id="historyPanel">
+
+            <div class="history-header">
+
+                <div>
+                    <h2>History</h2>
+                    <p>Your calculations</p>
+                </div>
+
+                <button
+                    class="close-history"
+                    id="closeHistory"
+                >
+                    ×
+                </button>
+
+            </div>
+
+            <div
+                class="history-list"
+                id="historyList"
+            ></div>
+
+            <button
+                class="clear-history"
+                id="clearHistory"
+            >
+                Clear History
+            </button>
+
+        </aside>
+
+
+        <!-- TOAST -->
+        <div
+            class="toast"
+            id="toast"
+        >
+            Copied!
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
